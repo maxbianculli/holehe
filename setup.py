@@ -11,7 +11,7 @@ setup(
     install_requires=["termcolor","bs4","httpx","trio","tqdm","colorama"],
     description="holehe allows you to check if the mail is used on different sites like twitter, instagram , snapchat and will retrieve information on sites with the forgotten password function.",
     include_package_data=True,
-    url='http://github.com/megadose/holehe',
+    url='http://github.com/maxbianculli/holehe',
     entry_points = {'console_scripts': ['holehe = holehe.core:main']},
     classifiers=[
         "Programming Language :: Python",
