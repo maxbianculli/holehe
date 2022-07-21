@@ -119,6 +119,7 @@ def print_result(data,args,email,start_time,websites):
     print("   " + email)
     print("*" * (len(email) + 6))
 
+    my_num = 0
     for results in data:
         if results["rateLimit"] and args.onlyused == False:
             websiteprint = print_color("[x] " + results["domain"], "red",args)
@@ -139,10 +140,12 @@ def print_result(data,args,email,start_time,websites):
 
             websiteprint = print_color("[+] " + results["domain"] + toprint, "green",args)
             print(websiteprint)
+            my_num = my_num + 1
 
     print("\n" + description)
     print(str(len(websites)) + " websites checked in " +
           str(round(time.time() - start_time, 2)) + " seconds")
+    print("wow " + str(my_num) + " Results found. Nice!")
 
 
 def export_csv(data,args,email):
